@@ -7,4 +7,5 @@ app = Flask(__name__)
 def reflect_page():
     return {"headers": dict(request.headers),
             "args": dict(request.args),
-            "url": str(request.url)}
+            "url": str(request.url),
+            "req_ip": request.remote_addr}
