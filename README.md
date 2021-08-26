@@ -1,3 +1,3 @@
 # request_reflect
 
-This is a plain and simple web server that simply reflects request headers, args, requested url, and ip address back in json format. This is useful for testing if any modifications have been made to your request in transit, this commonly happens when using a proxy. This is already configured to be deployed to Heroku.
+This is a plain and simple web server that simply reflects request headers, args, requested url, and ip address back in json format. This is useful for testing if any modifications have been made to your request in transit, this commonly happens when using a proxy. This is already configured to be built and ran with docker. Be sure not to deploy this behind a reverse proxy, and also be sure to add the flag `--network host`. Reverse proxies often modify the headers of a request in transit, so the returned results from the web server will be not quite right if it is behind a reverse proxy.
